@@ -1,3 +1,39 @@
-#title {
+body {
+	background-image: url("../img/background.jpeg")
+}
+
+h1 {
+	font-family: 'Metamorphous', cursive;
+	font-size: 100px;
+}
+
+input {
 	text-align: center;
+}
+
+input,
+button {
+	border-radius: 5px;
+}
+
+#nav {
+	text-align: center;
+}
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.results {
+	border: 1px solid black;
+	border-radius: 10px;
+	text-align: center;
+	background-color: #FDFFE5;
+}
+
+img,
+p {
+	margin-top: 10px;
 }
