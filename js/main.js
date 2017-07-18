@@ -4,8 +4,11 @@ function bookSearch() {
 	document.getElementById("results").innerHTML = ""
 	console.log(search)
 
+	// Initiage ajax call
 	$.ajax({
+		// Here's the URL to use plus the results of the input variable as the query info
 		url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
+		// Here's the type of data file returned
 		dataType: "json",
 
 		success: function(data){
@@ -47,8 +50,9 @@ function bookSearch() {
 			}
 		},
 
+		// Here's the type of server request (it gets the data)
 		type: "GET"
 	});
 }	
-
-document.getElementById("button").addEventListener("click", bookSearch, false)
+// Alternative method for calling bookSearch function if onclick attribute were removed from button element on index file
+// document.getElementById("button").addEventListener("click", bookSearch, false)

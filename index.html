@@ -4,33 +4,42 @@
 	
 	<title>GOOGLE BOOKS API</title>
 
+	<!-- Ensures responsiveness for multiple devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Makes bootstrap columns and other class-associated css work -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+	<!-- Makes custom css work -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
+	<!-- Adds cool font to project -->
 	<link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
 
 
 </head>
 <body>
 
+	<!-- NAV -->
 	<div id="nav">
 		<h1>Book Finder</h1>
 		<input id="search" placeholder="Enter Title or Author">
-		<button id="button" type="button">Click Me</button>
+		<button id="button" type="button" onclick="bookSearch()">Click Me</button>
 	</div>
 
 	<br />
-
+	
+	<!-- Here's the Bootstrap divs and classes that ensure the created divs and attached elements in the bookSearch function line up well -->
 	<div class="container">
 		<div id="results" class="row equal">
 			
 		</div>
 	</div>
 
+	<!-- Here's the jquery that ensures the ajax call works -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<!-- Here's the link to connect the HTML and JavaScript files -->
 	<script src="js/main.js"></script>
 
 </body>

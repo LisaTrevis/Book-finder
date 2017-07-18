@@ -1,31 +1,38 @@
+/*This gives us the lovely patterend paper background*/
 body {
 	background-image: url("../img/background.jpeg")
 }
 
+/*This gives us a fun font and appropriate size for the h1 element*/
 h1 {
 	font-family: 'Metamorphous', cursive;
 	font-size: 100px;
 }
 
+/*This puts the placeholder text in the middle of the input search box*/
 input {
 	text-align: center;
 }
 
+/*This gives our input box and button a lovely rounded look*/
 input,
 button {
 	border-radius: 5px;
 }
 
+/*This aligns our h1, input box, and button in the center of the page*/
 #nav {
 	text-align: center;
 }
 
+/*This makes our created divs line up horizontally*/
 .equal {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
 }
 
+/*This gives our created divs a nice look*/
 .results {
 	border: 1px solid black;
 	border-radius: 10px;
@@ -33,6 +40,7 @@ button {
 	background-color: #FDFFE5;
 }
 
+/*This gives us a little space between the images and titles of our created div content*/
 img,
 p {
 	margin-top: 10px;
