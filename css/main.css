@@ -18,11 +18,13 @@ input {
 input,
 button {
 	border-radius: 5px;
+	font-size: 25px;
 }
 
 /*This aligns our h1, input box, and button in the center of the page*/
 #nav {
 	text-align: center;
+	margin-top: 50px;
 }
 
 /*This makes our created divs line up horizontally*/
@@ -37,7 +39,9 @@ button {
 	border: 1px solid black;
 	border-radius: 10px;
 	text-align: center;
-	background-color: #FDFFE5;
+	background-color: white;
+	margin: 1%;
+	width: 22%;
 }
 
 /*This gives us a little space between the images and titles of our created div content*/
@@ -45,3 +49,10 @@ img,
 p {
 	margin-top: 10px;
 }
+
+.animated {
+	animation-duration: 2s;
+}
+
+
+
