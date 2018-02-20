@@ -1,13 +1,24 @@
+$( "#search" ).keyup(function(e) {
+  if(e.which === 13) {
+  	bookSearch();
+  }
+});
+
 function bookSearch() {
+	// Check to see if the results div has content already
+	if(document.getElementById("results").innerHTML !== '') {
+		document.getElementById("results").innerHTML = '';
+	}
+
 	// Create variable to store input value in search
 	var search = document.getElementById("search").value
-	document.getElementById("results").innerHTML = ""
+
 	console.log(search)
 
-	// Initiage ajax call
+	// Initiate ajax call
 	$.ajax({
 		// Here's the URL to use plus the results of the input variable as the query info
-		url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
+		url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=40",
 		// Here's the type of data file returned
 		dataType: "json",
 
@@ -26,7 +37,7 @@ function bookSearch() {
 				var newTitle = document.createElement("h2")
 
 				// Create any classes needed and attach to elements
-				newDiv.className = "col-md-4 results"
+				newDiv.className = "col-md-3 results animated fadeIn"
 
 				// Create text nodes for each element using data pull
 				var newAuthorText = document.createTextNode(data.items[i].volumeInfo.authors)
@@ -53,6 +64,8 @@ function bookSearch() {
 		// Here's the type of server request (it gets the data)
 		type: "GET"
 	});
+
+	var form = document.getElementById("search").value = '';
 }	
 // Alternative method for calling bookSearch function if onclick attribute were removed from button element on index file
 // document.getElementById("button").addEventListener("click", bookSearch, false)
